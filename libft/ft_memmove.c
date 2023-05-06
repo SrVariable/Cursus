@@ -6,7 +6,7 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 12:44:06 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/06 11:30:41 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:09:40 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ void	*ft_memmove(void *dest, const void *src, size_t bytes)
 	if (str > str2)
 	{
 		while (bytes--)
-			str[bytes] = str2[bytes];
+		{
+			*(str + bytes) = *(str2 + bytes);
+		}
 	}
 	else
 	{
