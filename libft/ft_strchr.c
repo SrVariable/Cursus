@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 16:47:57 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/04/30 19:16:51 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 11:36:32 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strchr(const char *str, int c)
 	cont = 0;
 	while (*(char *)(str + cont) != 0)
 	{
-		if (*(char *)(str + cont) == (char) c)
+		if (*(char *)(str + cont) == (char)c)
 		{
 			return ((char *)str + cont);
 		}
 		cont++;
 	}
-	if ((char) c == '\0')
+	if ((char)c == '\0')
 	{
 		return ((char *)str + cont);
 	}
