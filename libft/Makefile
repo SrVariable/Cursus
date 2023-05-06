@@ -39,6 +39,7 @@ FILES2 = $(P)substr.c \
 		$(P)strjoin.c \
 		$(P)strmapi.c \
 		$(P)striteri.c \
+		$(P)itoa.c \
 		$(P)putchar$(S1).c \
 		$(P)putstr$(S1).c \
 		$(P)putendl$(S1).c \
