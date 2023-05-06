@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 10:22:54 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/04 10:35:57 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 11:41:22 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	cont = 0;
 	while (cont < ft_strlen(s))
 	{
-		f(cont, &s[cont]);
+		f(cont, (s + cont));
 		cont++;
 	}
 }
