@@ -6,7 +6,7 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 19:22:18 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/04/27 17:00:48 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 11:08:48 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	*ft_memset(void *vstr, int value, size_t bytes)
 	char	*str;
 
 	str = (char *)vstr;
-	while (bytes-- > 0)
+	while (bytes--)
 	{
-		*str = (unsigned char)value;
-		str++;
+		*str++ = (unsigned char)value;
 	}
 	return (vstr);
 }
