@@ -6,7 +6,7 @@
 /*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 19:46:32 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/06 22:33:27 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 22:35:20 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 int	numlen(int n)
 {
 	unsigned int	newnum;
-	int	cont;
-
+	int				cont;
 
 	if (n < 0)
 	{
@@ -57,6 +56,7 @@ char	*assignmalloc(int n, int bytes)
 char	*nbrtostr(char *str, int n, int nlen)
 {
 	unsigned int	newnum;
+
 	if (n < 0)
 	{
 		newnum = n * -1;
