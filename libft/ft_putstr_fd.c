@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 10:38:52 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/04 10:58:07 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:11:48 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putstr_fd(char *s, int fd)
 	int	cont;
 
 	cont = 0;
-	while (s[cont] != '\0')
+	while (*(s + cont) != '\0')
 	{
-		write(fd, &s[cont], 1);
+		write(fd, (s + cont), 1);
 		cont++;
 	}
 }
