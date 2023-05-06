@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:11:18 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/04 11:21:04 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:14:16 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	}
 	while (cont < ft_strlen(s1))
 	{
-		newstr[cont] = s1[cont];
+		*(newstr + cont) = *(s1 + cont);
 		cont++;
 	}
 	while (cont < (ft_strlen(s1) + ft_strlen(s2)))
 	{
-		newstr[cont] = s2[cont2];
+		*(newstr + cont) = *(s2 + cont2);
 		cont++;
 		cont2++;
 	}
-	newstr[cont] = '\0';
+	*(newstr + cont) = '\0';
 	return (newstr);
 }
 
