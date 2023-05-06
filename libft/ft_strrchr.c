@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:13:05 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/02 16:08:49 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:03:26 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)str);
 	while (size--)
 	{
-		if (str[size] == (unsigned char)c)
+		if (*(str + size) == (unsigned char)c)
 			return ((char *)str + size);
 	}
 	return (0);
