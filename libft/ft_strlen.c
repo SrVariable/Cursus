@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribana-b < ribana-b@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:16:45 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/02 18:16:40 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:27:33 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *string)
+size_t	ft_strlen(const char *str)
 {
 	int	cont;
 
 	cont = 0;
-	while (*string != '\0')
+	while (*str != '\0')
 	{
 		cont++;
-		string++;
+		str++;
 	}
 	return (cont);
 }
