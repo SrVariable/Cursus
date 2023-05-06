@@ -6,17 +6,13 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:14:07 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/04/27 17:00:37 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 11:14:07 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if ((c >= ' ' && c <= '~'))
-	{
-		return (1);
-	}
-	return (0);
+	return ((c >= ' ' && c <= '~'));
 }
 
 /* //This is for testing
