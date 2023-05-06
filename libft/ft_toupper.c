@@ -6,14 +6,16 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:06:27 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/04/27 17:01:18 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:08:06 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
+	{
 		return ((c - 32));
+	}
 	return (c);
 }
 
