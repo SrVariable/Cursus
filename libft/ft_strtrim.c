@@ -6,7 +6,7 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 01:47:04 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/06 01:55:21 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 14:17:33 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,26 @@
 
 char	*ft_strtrim(const char *s1, char const *set)
 {
-	size_t	begcont;
-	size_t	endcont;
+	size_t	scont;
+	size_t	econt;
 
-	if (!s1 || !set)
+	if (!s1 ||!set)
+	{
+		return (0);
+	}	
+	if (!*s1)
 	{
 		return (ft_calloc(1, 1));
 	}
-	begcont = 0;
-	while (ft_strchr(set, s1[begcont]))
+	scont = 0;
+	econt = ft_strlen(s1);
+	while (ft_strchr(set, *(s1 + scont)))
 	{
-		begcont++;
+		scont++;
 	}
-	begcont = 0;
-	while (ft_strrchr(set, s1[begcont]))
+	while (ft_strrchr(set, *(s1 + econt)))
 	{
-		endcont--;
+		econt--;
 	}
-	return (ft_substr(s1, begcont, endcont));
+	return (ft_substr(s1, scont, econt - scont + 1));
 }
