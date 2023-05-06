@@ -6,7 +6,7 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 01:39:58 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/06 11:50:02 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:21:04 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t bytes)
 	cont = 0;
 	if (destlen >= bytes)
 		return (srclen + bytes);
-	while (src[cont] && ((destlen + cont) < (bytes - 1)))
+	while (*(src + cont) && ((destlen + cont) < (bytes - 1)))
 	{
-		dest[destlen + cont] = src[cont];
+		*(dest + destlen + cont) = *(src + cont);
 		cont++;
 	}
-	dest[destlen + cont] = '\0';
+	*(dest + destlen + cont) = '\0';
 	return (destlen + srclen);
 }
 
