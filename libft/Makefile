@@ -39,12 +39,13 @@ FILES2 = $(P)substr.c \
 		$(P)strjoin.c \
 		$(P)strmapi.c \
 		$(P)striteri.c \
+		$(P)strtrim.c \
+		$(P)split.c \
 		$(P)itoa.c \
 		$(P)putchar$(S1).c \
 		$(P)putstr$(S1).c \
 		$(P)putendl$(S1).c \
 		$(P)putnbr$(S1).c \
-		$(P)strtrim.c \
 
 FILESBONUS = $(P)lstnew.c \
 			$(P)lstadd_front.c \
@@ -53,6 +54,8 @@ FILESBONUS = $(P)lstnew.c \
 			$(P)lstadd_back.c \
 			$(P)lstdelone.c \
 			$(P)lstclear.c \
+			$(P)lstiter.c \
+			$(P)lstmap.c \
 
 OBJ = $(FILES:.c=.o) $(FILES2:.c=.o)
 
