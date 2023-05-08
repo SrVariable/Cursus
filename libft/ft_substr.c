@@ -6,7 +6,7 @@
 /*   By: ribana-b <ribana-b@42student.malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 22:59:46 by ribana-b          #+#    #+#             */
-/*   Updated: 2023/05/06 12:05:59 by ribana-b         ###   ########.fr       */
+/*   Updated: 2023/05/08 02:16:15 by ribana-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t bytes)
 	}
 	if (start >= ft_strlen(s))
 	{
-		newstr = ft_calloc(1, 1);
-		return (newstr);
+		return (ft_calloc(1, 1));
 	}
 	newstr = (char *)malloc((bytes + 1) * sizeof(char));
 	if (!newstr)
