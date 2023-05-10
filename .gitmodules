@@ -1,0 +1,3 @@
+[submodule "First Ring/libft"]
+	path = First Ring/libft
+	url = git@github.com:SrRecursive/libft.git
