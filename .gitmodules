@@ -1,9 +1,6 @@
 [submodule "First Ring/libft"]
 	path = First Ring/libft
 	url = git@github.com:SrRecursive/libft.git
-[submodule "Second Ring/printf"]
-	path = Second Ring/printf
-	url = git@github.com:SrRecursive/printf.git
 [submodule "Second Ring/get_next_line"]
 	path = Second Ring/get_next_line
 	url = git@github.com:SrRecursive/get_next_line.git
