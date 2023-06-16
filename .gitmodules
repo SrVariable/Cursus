@@ -7,6 +7,3 @@
 [submodule "Second Ring/printf"]
 	path = Second Ring/printf
 	url = git@github.com:SrRecursive/printf.git
-[submodule "CursusTester"]
-	path = CursusTester
-	url = git@github.com:SrRecursive/CursusTester.git
