@@ -41,11 +41,17 @@ PRINTF_NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
 
 # ---------------------------------------------------------------------
+# File paths
+
+PRINTF_OLD_PATH = ../Second\ Ring/printf
+PRINTF_NEW_PATH = ./printf
+
+# ---------------------------------------------------------------------
 # C Files
 
-PRINTF_FILES = ./printf/files/ft_printf.c \
-				./printf/files/ft_putchar.c \
-				./printf/files/ft_putnbr.c
+PRINTF_FILES = $(PRINTF_NEW_PATH)/files/ft_printf.c \
+				$(PRINTF_NEW_PATH)/files/ft_putchar.c \
+				$(PRINTF_NEW_PATH)/files/ft_putnbr.c
 
 # ---------------------------------------------------------------------
 # Object Files
@@ -61,47 +67,59 @@ all:
 # ---------------------------------------------------------------------
 # Macros
 
+# Libft
+
+#### TO DO
+
+# Printf
+
 $(PRINTF_NAME): $(PRINTF_OBJS)
 	@ar rcs $(PRINTF_NAME) $(PRINTF_OBJS)
-	@mv ./printf/files/*.o ./printf/obj
-	@echo "$(BOLD)$(T_GREEN)SUCCESS:$(RESET) libftprintf.a created"
+	@mv $(PRINTF_NEW_PATH)/files/*.o $(PRINTF_NEW_PATH)/obj
+	@echo "$(BOLD)$(T_GREEN)SUCCESS:$(RESET) $(PRINTF_NAME) created"
 	@echo "Use $(BOLD)make $(T_YELLOW)[ printf_test1 | printf_test2 ]$(RESET)"
 
 
 $(PRINTF_OBJS): mk_printf_obj $(PRINTF_FILES)
 	@gcc $(FLAGS) -c $(PRINTF_FILES)
-	@mv *.o ./printf/files
+	@mv *.o $(PRINTF_NEW_PATH)/files
 
 # ---------------------------------------------------------------------
 # Targets
 
+# Libft
+
+#### TO DO
+
+# Printf
+
 printf: $(PRINTF_NAME)
 
 cp_printf:
-	@mkdir ./printf
-	@mkdir ./printf/files
-	@cp -r ../Second\ Ring/printf/ft_* ./printf/files
+	@mkdir -p $(PRINTF_NEW_PATH)
+	@mkdir -p $(PRINTF_NEW_PATH)/files
+	@cp -r $(PRINTF_OLD_PATH)/ft_* $(PRINTF_NEW_PATH)/files
 
 mk_printf_obj: cp_printf
-	@rm -rf ./printf/obj
-	@mkdir -p ./printf/obj
+	@rm -rf $(PRINTF_NEW_PATH)/obj
+	@mkdir -p $(PRINTF_NEW_PATH)/obj
 
 printf_test1:
-	@mkdir -p ./printf/test
-	@gcc ./printf_test/printf_basic.c libftprintf.a -o ./printf/test/test1
+	@mkdir -p $(PRINTF_NEW_PATH)/test
+	@gcc ./printf_test/printf_basic.c $(PRINTF_NAME) -o $(PRINTF_NEW_PATH)/test/test1
 	@echo
 	@echo "$(BOLD)$(T_YELLOW)Basic test$(RESET)"
-	@./printf/test/test1
+	@$(PRINTF_NEW_PATH)/test/test1
 
 printf_test2:
-	@mkdir -p ./printf/test
-	@gcc ./printf_test/printf_mix.c libftprintf.a -o ./printf/test/test2
+	@mkdir -p $(PRINTF_NEW_PATH)/test
+	@gcc ./printf_test/printf_mix.c $(PRINTF_NAME) -o $(PRINTF_NEW_PATH)/test/test2
 	@echo
 	@echo "$(BOLD)$(T_YELLOW)Mix test$(RESET)"
-	@./printf/test/test2
+	@$(PRINTF_NEW_PATH)/test/test2
 	
 fclean:
-	@rm -rf ./printf $(PRINTF_NAME)
+	@rm -rf $(PRINTF_NEW_PATH) $(PRINTF_NAME)
 	@clear
 
 .PHONY: all cp_printf mk_printf_obj printf printf_test1 fclean
