@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "printf/ft_printf.h"
-#include "colors.h"
+#include "../printf/ft_printf.h"
+#include "../colors.h"
 
 int	main(void)
 {
