@@ -144,11 +144,13 @@ PRINTF_FILES = $(PRINTF_NEW_PATH)/files/ft_printf.c \
 
 # Libft
 
-LIBFT_OBJS = $(LIBFT_FILES:.c=.o) $(LIBFT_FILES_2:.c=.o) $(LIBFT_FILES_BONUS:.c=.o)
+LIBFT_OBJS = $(LIBFT_FILES:%.c=%.o) \
+			$(LIBFT_FILES_2:%.c=%.o) \
+			$(LIBFT_FILES_BONUS:%.c=%.o)
 
 # Printf
 
-PRINTF_OBJS = $(PRINTF_FILES:.c=.o)
+PRINTF_OBJS = $(PRINTF_FILES:%.c=%.o)
 
 # ---------------------------------------------------------------------
 # Main target
@@ -162,27 +164,22 @@ all:
 # Libft
 
 $(LIBFT_NAME): mk_libft_obj $(LIBFT_OBJS)
-	@ar rcs $(LIBFT_NAME) $(LIBFT_OBJS)
+	ar rcs $(LIBFT_NAME) $(LIBFT_OBJS)
 	@mv $(LIBFT_NEW_PATH)/files/*.o $(LIBFT_NEW_PATH)/obj
 	@echo "$(BOLD)$(T_GREEN)SUCESS:$(RESET) $(LIBFT_NAME) created"
 	@echo "Use $(BOLD)make $(T_YELLOW)[ libft_test1 | libft_test2 | libft_test3 ]$(RESET)"
 
-$(LIBFT_OBJS):
-	@gcc $(FLAGS) -c $(LIBFT_FILES) $(LIBFT_FILES_2) $(LIBFT_FILES_BONUS)
-	@mv *.o $(LIBFT_NEW_PATH)/files
-
 # Printf
 
 $(PRINTF_NAME): mk_printf_obj $(PRINTF_OBJS)
-	@ar rcs $(PRINTF_NAME) $(PRINTF_OBJS)
+	ar rcs $(PRINTF_NAME) $(PRINTF_OBJS)
 	@mv $(PRINTF_NEW_PATH)/files/*.o $(PRINTF_NEW_PATH)/obj
 	@echo "$(BOLD)$(T_GREEN)SUCCESS:$(RESET) $(PRINTF_NAME) created"
 	@echo "Use $(BOLD)make $(T_YELLOW)[ printf_test1 | printf_test2 ]$(RESET)"
 
-
-$(PRINTF_OBJS):
-	@gcc $(FLAGS) -c $(PRINTF_FILES)
-	@mv *.o $(PRINTF_NEW_PATH)/files
+# Generate the objects
+%.o: %.c
+	gcc -Wall -Wextra -Werror -c $< -o $@
 
 # ---------------------------------------------------------------------
 # Targets
