@@ -2,6 +2,10 @@
 
 This is my own Tester for 42 Cursus projects
 
+## NOTE
+
+Deprecated, will be functional as soon as I have time
+
 ## Current available tests
 
 ### Printf

@@ -209,7 +209,7 @@ printf: $(PRINTF_NAME)
 cp_printf:
 	@mkdir -p $(PRINTF_NEW_PATH)
 	@mkdir -p $(PRINTF_NEW_PATH)/files
-	@cp -r $(PRINTF_OLD_PATH)/*c $(PRINTF_OLD_PATH)/*h $(PRINTF_NEW_PATH)/files
+	@cp -r $(PRINTF_OLD_PATH)/src/*c $(PRINTF_OLD_PATH)/utils/*.c $(PRINTF_OLD_PATH)/include/*h $(PRINTF_NEW_PATH)/files
 
 mk_printf_obj: cp_printf
 	@mkdir -p $(PRINTF_NEW_PATH)/obj
