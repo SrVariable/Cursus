@@ -7,3 +7,6 @@
 [submodule "Second Ring/printf"]
 	path = Second Ring/printf
 	url = git@github.com:SrRecursive/printf.git
+[submodule "Third Ring/so_long"]
+	path = Third Ring/so_long
+	url = git@github.com:SrRecursive/so_long.git
