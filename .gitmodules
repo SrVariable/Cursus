@@ -10,3 +10,6 @@
 [submodule "Third Ring/so_long"]
 	path = Third Ring/so_long
 	url = git@github.com:SrRecursive/so_long.git
+[submodule "Third Ring/push_swap"]
+	path = Third Ring/push_swap
+	url = git@github.com:SrRecursive/push_swap.git
