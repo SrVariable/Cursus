@@ -13,3 +13,6 @@
 [submodule "Third Ring/push_swap"]
 	path = Third Ring/push_swap
 	url = git@github.com:SrRecursive/push_swap.git
+[submodule "Third Ring/pipex"]
+	path = Third Ring/pipex
+	url = git@github.com:SrRecursive/pipex.git
