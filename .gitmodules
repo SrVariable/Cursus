@@ -1,18 +1,18 @@
 [submodule "First Ring/libft"]
 	path = First Ring/libft
-	url = git@github.com:SrRecursive/libft.git
+	url = git@github.com:SrVariable/libft.git
 [submodule "Second Ring/get_next_line"]
 	path = Second Ring/get_next_line
-	url = git@github.com:SrRecursive/get_next_line.git
+	url = git@github.com:SrVariable/get_next_line.git
 [submodule "Second Ring/printf"]
 	path = Second Ring/printf
-	url = git@github.com:SrRecursive/printf.git
+	url = git@github.com:SrVariable/printf.git
 [submodule "Third Ring/so_long"]
 	path = Third Ring/so_long
-	url = git@github.com:SrRecursive/so_long.git
+	url = git@github.com:SrVariable/so_long.git
 [submodule "Third Ring/push_swap"]
 	path = Third Ring/push_swap
-	url = git@github.com:SrRecursive/push_swap.git
+	url = git@github.com:SrVariable/push_swap.git
 [submodule "Third Ring/pipex"]
 	path = Third Ring/pipex
-	url = git@github.com:SrRecursive/pipex.git
+	url = git@github.com:SrVariable/pipex.git
