@@ -45,7 +45,7 @@ This is my progress as a student in 42 Málaga
 		<td align="center"><strong>3</strong></td>
 		<td align="center"><a href="https://github.com/SrVariable/pipex">Pipex</td>
 		<td>Replicates the behaviour of a Unix pipe</td>
-		<td align="center">[<strong>Pending</strong>]</td>
+		<td align="center">[<strong>Finished</strong>]</td>
 	</tr>
 	<tr>
 		<td align="center"><strong>3</strong></td>
